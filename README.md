@@ -4,12 +4,18 @@ Building JBoss EAP(6,7) With Docker, For the moment, it supports 6.2.0->6.2.4, 6
 
 How ?
 =====
+run:
+--------
+    mkdir dist
+    docker run --name eap-build --privileged=true -v $PWD/dist:/eap-build-master/dist aker/jboss-eap-build 6.4.16
 
-First: mkdir dist
+result:
+--------
+you will get 'jboss-eap-6.4.16.zip'、'build.log' in dist
 
-Second: docker run --name eap-build --privileged=true -v $PWD/dist:/eap-build-master/dist aker/jboss-eap-build 6.4.16
-
-Option: docker rm -v eap-build
+Option: 
+--------
+docker rm -v eap-build
 
 Others
 =====
